@@ -18,7 +18,11 @@
         <java.version>11</java.version>
         <spring-boot.build-image.imageName>callibrity/${project.artifactId}:${project.version}
         </spring-boot.build-image.imageName>
+
         <jkube.generator.name>${spring-boot.build-image.imageName}</jkube.generator.name>
+        <jkube.generator.spring-boot.prometheusPort>0</jkube.generator.spring-boot.prometheusPort>
+        <jkube.generator.spring-boot.jolokiaPort>0</jkube.generator.spring-boot.jolokiaPort>
+
         <docker.skip.tag>true</docker.skip.tag>
     </properties>
 
