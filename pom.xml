@@ -10,7 +10,7 @@
     </parent>
     <groupId>hello</groupId>
     <artifactId>spring-k8s</artifactId>
-    <version>1.0.27-SNAPSHOT</version>
+    <version>1.0.39-SNAPSHOT</version>
     <name>hello</name>
     <description>Demo project for Spring Boot</description>
 
@@ -96,6 +96,7 @@
                 <version>1.0.0-alpha-4</version>
                 <configuration>
                     <resources>
+                        <replicas>3</replicas>
                         <serviceAccounts>
                             <serviceAccount>
                                 <name>${project.artifactId}</name>
@@ -104,6 +105,10 @@
                         </serviceAccounts>
                     </resources>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>pl.project13.maven</groupId>
+                <artifactId>git-commit-id-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
