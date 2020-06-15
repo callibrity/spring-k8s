@@ -1,8 +1,16 @@
 spec:
   template:
     spec:
+      volumes:
+        - name: hello-secrets
+          secret:
+            secretName: "spring-k8s-secret"
       containers:
         - name: spring-boot
+          volumeMounts:
+          - name: hello-secrets
+            mountPath: "/etc/hello"
+            readOnly: true
           startupProbe:
             httpGet:
               path: /actuator/health/liveness

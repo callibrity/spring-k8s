@@ -10,7 +10,7 @@
     </parent>
     <groupId>hello</groupId>
     <artifactId>spring-k8s</artifactId>
-    <version>1.0.39-SNAPSHOT</version>
+    <version>1.0.45-SNAPSHOT</version>
     <name>hello</name>
     <description>Demo project for Spring Boot</description>
 
